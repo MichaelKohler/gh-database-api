@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.post('/create', async (req, res) => {
   debug('INCOMING_REQUEST_CREATE');
+  githubBackend.addEntry();
   res.send(200);
 });
 
