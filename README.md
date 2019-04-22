@@ -1,5 +1,7 @@
 # GitHub Database API
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MichaelKohler/gh-database-api.svg)](https://greenkeeper.io/)
+
 Campaign Bug Reporting page for the upcoming Fenix Campaign lead by the Open Innovation Team.
 
 ## Setting up the server
