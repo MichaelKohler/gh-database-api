@@ -3,6 +3,7 @@
 const debug = require('debug')('gh-database-api:server');
 const http = require('http');
 const app = require('./app');
+const githubBackend = require('./lib/githubBackend');
 
 const port = process.env.PORT || '4567';
 app.set('port', port);
@@ -42,4 +43,10 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+  githubBackend.initFile()
+    .catch((err) => {
+      debug('FILE_EXISTANCE_CHECK_FAILED', err);
+      process.exit(1);
+    });
 }
