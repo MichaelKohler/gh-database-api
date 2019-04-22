@@ -2,11 +2,19 @@
   "name": "gh-database-api",
   "version": "0.0.1",
   "scripts": {
-    "start": "DEBUG=gh-database-api* node index.js"
+    "start": "DEBUG=gh-database-api* node index.js",
+    "lint": "eslint --ext .js,.json ."
   },
   "dependencies": {
     "@octokit/rest": "^16.23.2",
     "debug": "^4.1.1",
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@michaelkohler/eslint-config-node": "^6.8.4",
+    "eslint": "^5.16.0"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
